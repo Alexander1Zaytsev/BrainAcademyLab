@@ -5,6 +5,7 @@ import java.util.Scanner;
  */
 public class FifthClass {
     public static void main(String[] args) {
+        // some change
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter an upper bound");
         int n = sc.nextInt();
