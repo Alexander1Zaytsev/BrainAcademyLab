@@ -11,5 +11,7 @@ public class Class148 {
         int d = (int)c;
         System.out.println(b);
         System.out.println(d);
+
+
     }
 }

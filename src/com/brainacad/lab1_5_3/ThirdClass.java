@@ -14,7 +14,7 @@ public class ThirdClass {
                 if (j < 9){
                     System.out.print(i * j + " ");
                 } else {
-                    System.out.println(i*j);
+                    System.out.println(i * j);
                 }
             }
         }
