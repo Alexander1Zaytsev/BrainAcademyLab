@@ -6,7 +6,7 @@ package com.brainacad.lab1_6_5;
 public class Class165 {
     public static void main(String[] args) {
         int arr[][] = {{1,1,1,3,4},{2,1,3,1,2},{2,1,3,4,1},{3,3,3,0,4}};
-        int searchElement = 1;
+        int searchElement = 1; //Searched element which we'll find frequency of meetings
         for (int i = 0; i < arr.length; i++){
             String str = "";
             for (int j = 0; j < arr[i].length; j++){

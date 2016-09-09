@@ -5,11 +5,12 @@ package com.brainacad.lab2_1_3;
  */
 public class Class213 {
     public static void main(String[] args) {
-        House[] arr = new House[5];
+        Computer[] arr = new Computer[5];
 
-        for (int i = 0; i < arr.length; i++) {
-            arr [i] = new House();
+        for (Computer element: arr){
+            element = new Computer();
+        }
         }
 
     }
-}
+
