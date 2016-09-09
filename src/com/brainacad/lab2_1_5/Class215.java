@@ -13,7 +13,7 @@ public class Class215 {
             arr[i] = new Computer();
         }
 
-        arr[0].setModel("Microsoft");
+        arr[0].setModel("IBM");
         arr[1].setModel("Apple");
         arr[2].setModel("Asus");
 
