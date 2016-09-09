@@ -1,11 +1,11 @@
-package com.brainacad;
+package com.brainacad.lab2_1_5;
 
 import com.brainacad.lab2_1_3_lab2_1_4.Computer;
 
 /**
  * Created by Alex on 9/9/2016.
  */
-public class lab2_1_5 {
+public class Class215 {
     public static void main(String[] args) {
         Computer[] arr = new Computer[3];
 
