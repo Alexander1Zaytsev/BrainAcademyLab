@@ -20,13 +20,13 @@ public class Class215 {
         double price = 3000;
         for (Computer element:arr){
             element.setPrice(price);
-            price+=100;
+            price += 100;
         }
 
         int hdd = 600;
         for (Computer element: arr){
             element.setHdd(hdd);
-            hdd+=200;
+            hdd += 200;
         }
 
         for (Computer element: arr){
