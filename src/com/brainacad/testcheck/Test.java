@@ -15,6 +15,10 @@ public class Test {
 
         System.out.println(Arrays.toString(arr));
 
+        int i = 9 / 2;
+        System.out.println(i);
+
+       
 
     }
 

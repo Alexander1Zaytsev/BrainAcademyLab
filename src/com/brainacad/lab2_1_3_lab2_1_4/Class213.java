@@ -30,7 +30,7 @@ public class Class213 {
          }*/
 
         System.out.println("Increasing prices is");
-        for (Computer element:arr){                              //increase price
+        for (Computer element:arr){                              //increase and print price
             element.setPrice(Math.round(1.1 * element.getPrice()*100.0)/100.0);
             System.out.println(element.getPrice());
         }
