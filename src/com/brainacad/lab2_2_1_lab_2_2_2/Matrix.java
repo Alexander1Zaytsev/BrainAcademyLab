@@ -4,6 +4,7 @@ package com.brainacad.lab2_2_1_lab_2_2_2;
  * Created by User on 10/09/2016.
  */
 public class Matrix {
+
     public int[][] arr = new int[2][2];
 
     public void setArr(int[][] arr) {
