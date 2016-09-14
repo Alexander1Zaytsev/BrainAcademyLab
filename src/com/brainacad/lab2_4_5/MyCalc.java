@@ -14,7 +14,7 @@ public class MyCalc {
             double k = 1.0;
             byte changeOperator = 1;
 
-            while (n > 1){
+            while (n > 0){
                 pi += changeOperator * STATE / k;
                 changeOperator *= -1;
                 k += 2;
