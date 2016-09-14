@@ -7,6 +7,7 @@ import com.brainacad.lab2_4_1_lab2_4_3.MyMath;
  * Created by User on 13/09/2016.
  */
 public class Calculation {
+
     public int[] arr1;
     public int[] arr2;
 

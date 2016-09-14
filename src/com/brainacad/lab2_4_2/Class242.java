@@ -4,7 +4,9 @@ package com.brainacad.lab2_4_2;
  * Created by User on 13/09/2016.
  */
 public class Class242 {
+
     public static void main(String[] args) {
+
         Calculation A = new Calculation();
 
         int[] arr1 = {10, 12, 1, 5};

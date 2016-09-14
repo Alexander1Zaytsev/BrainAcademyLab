@@ -12,9 +12,10 @@ public class Employee {
     private String occupation;
     private int telephone;
 
-    public Employee(){
+    public Employee(String firstName, String lastName, String occupation, int telephone){
         numberOfEmployees++;
     }
+
 
     public static int getNumberOfEmployees(){
         return numberOfEmployees;
