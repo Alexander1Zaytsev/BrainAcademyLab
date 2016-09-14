@@ -7,6 +7,6 @@ public class Class245 {
 
     public static void main(String[] args) {
 
-        System.out.println(MyCalc.calcPi(500));
+        System.out.println(MyCalc.calcPi(10000));
     }
 }

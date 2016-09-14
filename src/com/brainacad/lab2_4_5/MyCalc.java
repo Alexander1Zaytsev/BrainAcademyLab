@@ -7,16 +7,16 @@ public class MyCalc {
 
     public static double calcPi(int n){
 
-        double pi = 4;
+        double pi = 0;
         if (n > 1) {
 
             final int STATE = 4;
-            double k = 3.0;
-            byte changeOperand = -1;
+            double k = 1.0;
+            byte changeOperator = 1;
 
             while (n > 1){
-                pi = pi + (changeOperand) * STATE / k;
-                changeOperand *= -1;
+                pi += changeOperator * STATE / k;
+                changeOperator *= -1;
                 k += 2;
                 n--;
             }
