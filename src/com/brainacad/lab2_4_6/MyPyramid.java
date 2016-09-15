@@ -31,7 +31,6 @@ public class MyPyramid {
                 str = " " + str;
             }
 
-
             System.out.println(str);
         }
     }
