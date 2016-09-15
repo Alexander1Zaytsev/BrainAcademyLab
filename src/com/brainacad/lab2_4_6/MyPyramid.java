@@ -26,6 +26,12 @@ public class MyPyramid {
 
             String str = Arrays.toString(arr);
             str = ((str.replace("[", "")).replace(", ", "")).replace("]", "");
+
+            for (int m = h - i; m > 0; m--){
+                str = " " + str;
+            }
+
+
             System.out.println(str);
         }
     }

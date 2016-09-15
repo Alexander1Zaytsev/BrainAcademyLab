@@ -20,12 +20,10 @@ public class Calculation {
     }
 
     public int getMinFirstArray(){
-        int min = MyMath.findMin(arr1);
-        return min;
+        return MyMath.findMin(arr1);
     }
 
     public int getMaxSecondArray() {
-        int max = MyMath.findMax(arr2);
-        return max;
+        return MyMath.findMax(arr2);
     }
 }
