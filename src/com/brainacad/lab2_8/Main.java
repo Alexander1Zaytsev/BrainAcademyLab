@@ -27,10 +27,13 @@ public class Main {
         }
         System.out.println("\n");
 
+
         System.out.println(((Rectangle)arr[0]).compareTo((Rectangle)arr[1])); // Compare first rectangle and second rectangle in array by area
         System.out.println("\n");
 
-        Rectangle[] arr2 = new Rectangle[6];
+
+
+        Rectangle[] arr2 = new Rectangle[6];      //New array of rectangles override methods and sort it
         for (int i = 0; i < arr2.length; i++){
             arr2[i] = new Rectangle("Orange", 10 - i, 11 + i);
         }
@@ -39,8 +42,6 @@ public class Main {
         for (Rectangle element:arr2){
             element.draw();
         }
-
-
 
     }
 
