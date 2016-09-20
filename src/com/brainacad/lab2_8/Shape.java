@@ -5,7 +5,7 @@ import java.util.Comparator;
 /**
  * Created by Alex on 9/20/2016.
  */
-public abstract class Shape implements Drawable {
+public abstract class Shape implements Drawable {        // Lab 2-8 add implements
 
     protected String shapeColor;
 
@@ -21,7 +21,7 @@ public abstract class Shape implements Drawable {
     }
 
     @Override
-    public void draw() {
+    public void draw() {                               // Lab 2-8 override method draw
         System.out.println(this);
         System.out.println("Area is " + this.calcArea());
     }
@@ -52,7 +52,7 @@ class Circle extends Shape{
 }
 
 
-class Rectangle extends Shape implements Comparable, Comparator{
+class Rectangle extends Shape implements Comparable {              //Lab 2-8 Comparable and Comparator
 
     private double width;
     private double height;
@@ -79,14 +79,6 @@ class Rectangle extends Shape implements Comparable, Comparator{
         if (this.calcArea() < ((Rectangle)o).calcArea()) return -1;
         return 0;
     }
-
-    @Override
-    public int compare(Object o1, Object o2){
-        if (((Rectangle)o1).calcArea() > ((Rectangle)o2).calcArea()) return 1;
-        if (((Rectangle)o1).calcArea() < ((Rectangle)o2).calcArea()) return -1;
-        return 0;
-    }
-
 
 }
 

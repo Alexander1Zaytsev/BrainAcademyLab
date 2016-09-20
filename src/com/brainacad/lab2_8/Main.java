@@ -28,7 +28,7 @@ public class Main {
         System.out.println("\n");
 
 
-        System.out.println(((Rectangle)arr[0]).compareTo((Rectangle)arr[1])); // Compare first rectangle and second rectangle in array by area
+        System.out.println(((Rectangle)arr[0]).compareTo(arr[1])); // Compare first rectangle and second rectangle in array by area
         System.out.println("\n");
 
 
@@ -38,7 +38,7 @@ public class Main {
             arr2[i] = new Rectangle("Orange", 10 - i, 11 + i);
         }
 
-        Arrays.sort(arr2);
+        Arrays.sort(arr2, new RectangleAreaComparator());
         for (Rectangle element:arr2){
             element.draw();
         }
