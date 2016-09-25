@@ -5,22 +5,44 @@ import java.util.Arrays;
 /**
  * Created by User on 06/09/2016.
  */
-public class Test {
-    public static void main(String [] args){
+class A {
 
-        int[] arr = new int[5];
-        for (int element: arr){
-            element = 1;
-        }
+    void a() {    System.out.println("A-a");    }
 
-        System.out.println(Arrays.toString(arr));
+    void b() {
 
-        int i = 9 / 2;
-        System.out.println(i);
+        System.out.println("A-b");
 
-       
+        a();
 
     }
 
 }
+
+class B extends A {
+
+    void a() {    System.out.println("B-a");   }
+
+    void b() {
+
+        System.out.println("B-b");
+
+        super.b();
+
+    }
+
+}
+
+public class Test {
+
+    public static void main(String[] s) {
+
+        A a = new B();
+
+        a.b();
+
+    }
+
+}
+
 
