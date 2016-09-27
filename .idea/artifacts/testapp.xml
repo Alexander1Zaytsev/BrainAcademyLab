@@ -3,10 +3,10 @@
     <output-path>$PROJECT_DIR$/out/artifacts/testapp</output-path>
     <root id="archive" name="testapp.jar">
       <element id="directory" name="testapp">
-        <element id="dir-copy" path="$PROJECT_DIR$/out/production/BrainAcademyLab/com/brainacad/testapp" />
+        <element id="file-copy" path="$PROJECT_DIR$/out/production/BrainAcademyLab1/testapp/Main.class" />
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/out/production/BrainAcademyLab/com/brainacad/testapp/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/out/production/BrainAcademyLab1/testapp/META-INF/MANIFEST.MF" />
       </element>
     </root>
   </artifact>

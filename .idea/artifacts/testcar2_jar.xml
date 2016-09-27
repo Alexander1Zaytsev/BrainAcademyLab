@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" name="testcar2:jar">
-    <output-path>$PROJECT_DIR$/out/artifacts/testcar2_jar</output-path>
-    <root id="archive" name="BrainAcademyLab.jar">
-      <element id="dir-copy" path="$PROJECT_DIR$/out/production/BrainAcademyLab/com/brainacad/carpack" />
-    </root>
-  </artifact>
-</component>
