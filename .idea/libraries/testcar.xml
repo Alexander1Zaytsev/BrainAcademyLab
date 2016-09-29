@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="testcar">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../com.brainacad.carpack/out/artifacts/testcar/testcar.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Lib/testcar.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
