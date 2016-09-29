@@ -25,6 +25,16 @@ public abstract class Shape implements Drawable {        // Lab 2-8 add implemen
         System.out.println(this);
         System.out.println("Area is " + this.calcArea());
     }
+
+//   public static Shape parseShape(String str){              //Lab 2-10-3
+//       StringBuilder sb = new StringBuilder(str);
+//       String str1 = str.split(":")[0];
+//        Shape shape;
+//        switch (str1){
+//            case "Rectangle":
+//                shape = new Rectangle()
+//        }
+//    }
 }
 
 

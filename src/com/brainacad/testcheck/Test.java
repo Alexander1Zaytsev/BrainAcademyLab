@@ -13,9 +13,8 @@ public class Test {
 
     public static void main(String[] s) {
 
-        String name = new String("Paul");
-        System.out.print(name.charAt(1));
-        System.out.print(name.charAt(2));
+        String str = "jkhbshd: jkdsn. jdvhjd, ksjd";
+        System.out.println(str.split(",")[0]);
 
     }
 
