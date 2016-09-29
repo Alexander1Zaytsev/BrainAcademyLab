@@ -1,3 +1,5 @@
+/* hklsdgflsdgf*/
+
 package com.brainacad.testcheck;
 
 
@@ -11,14 +13,9 @@ public class Test {
 
     public static void main(String[] s) {
 
-       String str = new String("Hello, hello");
-
-        String str2 = new String(str);
-
-        char[] characters = {'H', 'e', 'l', 'l', 'o', '!'};
-
-        String str3 = new String(characters, 1, 3);
-        System.out.println(str3);
+        String name = new String("Paul");
+        System.out.print(name.charAt(1));
+        System.out.print(name.charAt(2));
 
     }
 
