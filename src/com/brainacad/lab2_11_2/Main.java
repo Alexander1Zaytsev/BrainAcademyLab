@@ -26,5 +26,15 @@ public class Main {
             System.out.println("Finally2");
         }
 
+        System.out.println("\n");
+
+        MyTest myTest = new MyTest();
+        myTest = null;
+        try {
+            myTest.test();
+        } catch (MyException e){
+            e.print();
+        }
+
     }
 }

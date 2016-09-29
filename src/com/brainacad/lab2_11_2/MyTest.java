@@ -9,5 +9,4 @@ public class MyTest {
         throw new MyException("Throwing MyException through test method in MyTest class");
     }
 
-    Object myTest;
 }
