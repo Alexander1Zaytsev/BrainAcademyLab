@@ -9,8 +9,6 @@ public class Person {
     private String lastName;
     private int age;
 
-
-
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }

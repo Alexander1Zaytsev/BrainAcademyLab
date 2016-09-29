@@ -21,10 +21,8 @@ public class Main {
                 }
         }
 
-        char[] chars = new char[sb.length()];
-        sb.getChars(0,sb.length(),chars,0);
+        return sb.toString().toCharArray();
 
-        return chars;
     }
 
     public static void main(String[] args) {
