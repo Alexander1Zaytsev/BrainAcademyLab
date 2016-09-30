@@ -1,6 +1,8 @@
 package com.brainacad.lab2_8;
 
 import java.util.Comparator;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Created by Alex on 9/20/2016.
@@ -26,94 +28,41 @@ public abstract class Shape implements Drawable {        // Lab 2-8 add implemen
         System.out.println("Area is " + this.calcArea());
     }
 
-//   public static Shape parseShape(String str){              //Lab 2-10-3
-//       StringBuilder sb = new StringBuilder(str);
-//       String str1 = str.split(":")[0];
-//        Shape shape;
-//        switch (str1){
-//            case "Rectangle":
-//                shape = new Rectangle()
-//        }
-//    }
-}
+   public static Shape parseShape(String str) throws InvalidShapeStringException{              //Lab 2-10-3
+       String emplat = "(^\\w+):(\\w+):(\\d+)((.\\d+)*)((\\d+)((.\\d+)*))*";            //Lab 2-11-4
+       Pattern pat = Pattern.compile(emplat);
+       Matcher m = pat.matcher(str);
+       if (!m.matches()) throw new InvalidShapeStringException();
 
-
-class Circle extends Shape{
-
-    private double radius;
-
-    final double PI = 3.1415;
-
-    public Circle(String shapeColor, double radius) {
-        super(shapeColor);
-        this.radius = radius;
+       Shape shape = null;
+       String numbers = str.split(":")[2];
+       if (str.split(":")[0].compareToIgnoreCase("Rectangle") == 0){
+           shape = new Rectangle(str.split(":")[1], Double.parseDouble(numbers.split(",")[0]),
+                   Double.parseDouble(numbers.split(",")[1]));
+       }
+       if (str.split(":")[0].compareToIgnoreCase("Circle") == 0){
+           shape = new Circle(str.split(":")[1], Double.parseDouble(numbers));
+       }
+       if (str.split(":")[0].compareToIgnoreCase("Triangle") == 0){
+           shape = new Triangle(str.split(":")[1], Double.parseDouble(numbers.split(",")[0]),
+                   Double.parseDouble(numbers.split(",")[1]),Double.parseDouble(numbers.split(",")[1]));
+       }
+       return shape;
     }
 
-    @Override
-    public double calcArea(){
-        return PI * radius * radius;
-    }
-
-    @Override
-    public String toString(){
-        return "This is Circle, color: " + shapeColor + ", radius = " + radius;
-    }
-
-}
-
-
-class Rectangle extends Shape implements Comparable {              //Lab 2-8 Comparable and Comparator
-
-    private double width;
-    private double height;
-
-    public Rectangle(String shapeColor, double width, double height) {
-        super(shapeColor);
-        this.width = width;
-        this.height = height;
-    }
-
-    @Override
-    public double calcArea(){
-        return width * height;
-    }
-
-    @Override
-    public String toString(){
-        return "This is rectangle, color: " + shapeColor + ", width = " + width + ", height = " + height;
-    }
-
-    @Override
-    public int compareTo(Object o){
-        if (this.calcArea() > ((Rectangle)o).calcArea()) return 1;
-        if (this.calcArea() < ((Rectangle)o).calcArea()) return -1;
-        return 0;
-    }
-
-}
-
-
-class Triangle extends Shape {
-
-    private double a, b, c;
-
-        public Triangle(String shapeColor, double a, double b, double c) {
-            super(shapeColor);
-            this.a = a;
-            this.b = b;
-            this.c = c;
+    public static Shape parseShape1(String str){              //Lab 2-10-4
+        Shape shape = null;
+        if (str.split(":")[0].compareToIgnoreCase("Rectangle") == 0){
+            shape = Rectangle.parseRectangle(str);
         }
-
-    @Override
-    public double calcArea(){
-        double s = (a + b + c) / 2;
-        return Math.sqrt(s * (s - a) * (s - b) * (s - c));
+        if (str.split(":")[0].compareToIgnoreCase("Circle") == 0){
+            shape = Circle.parseCircle(str);
+        }
+        if (str.split(":")[0].compareToIgnoreCase("Triangle") == 0){
+            shape = Triangle.parseTriangle(str);
+        }
+        return shape;
     }
-
-    @Override
-    public String toString(){
-        return "This is Triangle, color: " + shapeColor + ", a = " + a + ", b = " + b + ", c = " + c;
-    }
-
-
 }
+
+
