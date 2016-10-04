@@ -10,7 +10,7 @@ public class Main1 {
         float f = 5.2f;
         double d = l + f;
 
-        assert compute(5L,5.2f)== d;
+        assert compute(5L,5.2f)== 50;
 
     }
 
