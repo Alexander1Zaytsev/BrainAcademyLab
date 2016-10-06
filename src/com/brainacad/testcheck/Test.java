@@ -14,14 +14,22 @@ public class Test {
 
     public static void main(String[] args) {
 
-        String str1 = "Vova";
-        String str2 = "Vasya";
+        MyDayOfWeek myDayOfWeek = MyDayOfWeek.SUUNDAY;
 
-        System.out.println(str1.compareToIgnoreCase(str2));
-
+        System.out.println(com.brainacad.lab2_13_1.MyDayOfWeek.values());
 
 
     }
 
+}
+
+enum MyDayOfWeek {
+    SUUNDAY,
+    MONDAY,
+    TUSDAY,
+    WEDNESDAY,
+    THURSDEY,
+    FRIDAY,
+    SATURDAY
 }
 
