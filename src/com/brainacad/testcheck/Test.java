@@ -10,26 +10,14 @@ package com.brainacad.testcheck;
  */
 
 
-public class Test {
 
+enum CoffeeSize {BIG, HUGE, OVERWHELMING};
+
+class Test {
     public static void main(String[] args) {
-
-        MyDayOfWeek myDayOfWeek = MyDayOfWeek.SUUNDAY;
-
-        System.out.println(com.brainacad.lab2_13_1.MyDayOfWeek.values());
-
-
+        CoffeeSize cs = CoffeeSize.BIG;
+        System.out.println(cs.HUGE);
     }
-
 }
 
-enum MyDayOfWeek {
-    SUUNDAY,
-    MONDAY,
-    TUSDAY,
-    WEDNESDAY,
-    THURSDEY,
-    FRIDAY,
-    SATURDAY
-}
 

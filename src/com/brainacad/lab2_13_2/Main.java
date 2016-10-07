@@ -11,10 +11,10 @@ public class Main {
 
         for (MyDayOfWeek day : MyDayOfWeek.values()) {
             switch (day) {
-                case TUSDAY:
+                case TUESDAY:
                     System.out.println("My JAVA day:" + day);
                     break;
-                case THURSDEY:
+                case THURSDAY:
                     System.out.println("My JAVA day:" + day);
                     break;
                 case SATURDAY:
