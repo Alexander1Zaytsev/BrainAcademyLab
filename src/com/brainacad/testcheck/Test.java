@@ -11,13 +11,16 @@ package com.brainacad.testcheck;
 
 
 
-enum CoffeeSize {BIG, HUGE, OVERWHELMING};
-
+import java.util.*;
 class Test {
     public static void main(String[] args) {
-        CoffeeSize cs = CoffeeSize.BIG;
-        System.out.println(cs.HUGE);
+        List<Integer> intList = new ArrayList<>();
+        intList.add(10);
+        intList.add(20);
+        List list = intList;
+        list.add("hello");
+        for (Object o : list) {
+            System.out.print(o + " ");
+        }
     }
 }
-
-
