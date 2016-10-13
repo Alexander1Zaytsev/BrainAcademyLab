@@ -24,13 +24,10 @@ public class MyNumGenerator {
         return list;
     }
 
-    public Set<Integer> generateDistinct(){
+    public Set<Integer> generateDistinct() {
         Set<Integer> set = new HashSet<>();
         Random random = new Random();
-        set.add(random.nextInt(maxNumb + 1));
-        for (int i = 1; i < numOfElem; i++){
-            while (set.size() < i + 1) set.add(random.nextInt(maxNumb + 1));
-        }
+        while (set.size() < numOfElem) set.add(random.nextInt(maxNumb + 1));
         return set;
     }
 }

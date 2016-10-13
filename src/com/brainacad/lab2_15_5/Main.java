@@ -9,7 +9,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        MyNumGenerator distinctGenerator = new MyNumGenerator(5,64);
+        MyNumGenerator distinctGenerator = new MyNumGenerator(5,15);
         System.out.println(distinctGenerator.generateDistinct());
     }
 }
