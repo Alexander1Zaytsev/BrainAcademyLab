@@ -7,21 +7,27 @@ import com.brainacad.lab2_13_1.MyDayOfWeek;
  */
 public class Main {
 
+    public static final String MY_JAVA_DAY = "My JAVA day:";
+
     public static void main(String[] args) {
 
         for (MyDayOfWeek day : MyDayOfWeek.values()) {
             switch (day) {
                 case TUESDAY:
-                    System.out.println("My JAVA day:" + day);
+                    print(day);
                     break;
                 case THURSDAY:
-                    System.out.println("My JAVA day:" + day);
+                    print(day);
                     break;
                 case SATURDAY:
-                    System.out.println("My JAVA day:" + day);
+                    print(day);
                     break;
             }
         }
 
+    }
+
+    private static void print(MyDayOfWeek day) {
+        System.out.println(MY_JAVA_DAY + day);
     }
 }
