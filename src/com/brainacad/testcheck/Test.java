@@ -10,5 +10,6 @@ package com.brainacad.testcheck;
  */
 
 public class Test{
-    
+    private String test;
+
 }
