@@ -36,7 +36,6 @@ public class MySumCount extends Thread {
 
     @Override
     public void run(){
-        resultSum = 0;
         for (int i = startIndex; i <= stopIndex; i++){
             resultSum = resultSum + arr[i];
         }
