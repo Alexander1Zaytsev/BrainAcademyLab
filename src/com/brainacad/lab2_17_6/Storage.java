@@ -5,13 +5,17 @@ package com.brainacad.lab2_17_6;
  */
 public class Storage {
 
-    private int[] store;
+    private int store;
 
-//    public void setStore(int store) {
-//        this.store = store;
-//    }
+    public void setStore(int store) {
+        this.store = store;
+    }
 
-    public int[] getStore() {
+    public int getStore() {
         return store;
+    }
+
+    public boolean ready(){
+        return store != 0;
     }
 }
