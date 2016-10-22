@@ -10,12 +10,9 @@ public class Main {
     public static void main(String[] args) {
 
         Storage storage = new Storage();
-
-
-        new Counter(1000000, storage).start();
-        new Printer(storage).start();
-
-
-
+        Counter counter = new Counter(1000000, storage);
+        Printer printer = new Printer(storage);
+        counter.start();
+        printer.start();
     }
 }

@@ -14,9 +14,16 @@ public class Printer extends Thread {
 
     @Override
     public void run(){
-            while (storage.ready()) {
-                System.out.println(storage.getStore());
+        synchronized (storage) {
+            while (!storage.ready()) {
+                try {
+                    wait();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
             }
-
+            System.out.println(storage.getStore());
+            storage.setStore(0);
+        }
     }
 }

@@ -8,6 +8,7 @@ import java.util.concurrent.Semaphore;
 public class Counter extends Thread {
     int n;
     Storage storage;
+    boolean flag = true;
 
 
     public Counter(int n, Storage storage) {
@@ -15,11 +16,24 @@ public class Counter extends Thread {
         this.storage = storage;
     }
 
+    public void setFlag(boolean b){
+        this.flag = b;
+    }
+
     @Override
-    public void run(){
+    public void run() {
+        synchronized (storage) {
             for (int i = 1; i < n; i++) {
                 storage.setStore(i);
+                while (storage.ready()) {
+                    try {
+                        wait();
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
             }
+        }
         storage.setStore(0);
     }
 }
