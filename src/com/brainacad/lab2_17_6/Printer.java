@@ -7,23 +7,28 @@ import java.util.concurrent.Semaphore;
  */
 public class Printer extends Thread {
     Storage storage;
+    private volatile boolean finished = false;
 
     public Printer(Storage storage) {
         this.storage = storage;
     }
 
+
+
     @Override
-    public void run(){
-        synchronized (storage) {
-            while (!storage.ready()) {
-                try {
-                    wait();
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
+    public void run() {
+
+            synchronized (storage) {
+                while (!storage.isReadyToPrint()) {
+                    try {
+                        storage.wait();
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
                 }
+                System.out.println(storage.getStore());
+                storage.setReadyToPrint(false);
             }
-            System.out.println(storage.getStore());
-            storage.setStore(0);
-        }
+
     }
 }

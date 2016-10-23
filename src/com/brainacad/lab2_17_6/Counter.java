@@ -1,6 +1,7 @@
 package com.brainacad.lab2_17_6;
 
-import java.util.concurrent.Semaphore;
+
+import java.util.concurrent.locks.Lock;
 
 /**
  * Created by User on 20/10/2016.
@@ -8,32 +9,30 @@ import java.util.concurrent.Semaphore;
 public class Counter extends Thread {
     int n;
     Storage storage;
-    boolean flag = true;
-
 
     public Counter(int n, Storage storage) {
         this.n = n;
         this.storage = storage;
     }
 
-    public void setFlag(boolean b){
-        this.flag = b;
-    }
-
     @Override
     public void run() {
-        synchronized (storage) {
-            for (int i = 1; i < n; i++) {
-                storage.setStore(i);
-                while (storage.ready()) {
+
+        
+        for (int i = 1; i < n; i++) {
+
+                    storage.setStore(i);
+                    storage.setReadyToPrint(true);
+
                     try {
-                        wait();
+                        storage.wait();
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
-                }
+
+
+
             }
-        }
-        storage.setStore(0);
+
     }
 }
