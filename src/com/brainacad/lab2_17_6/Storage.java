@@ -6,7 +6,8 @@ package com.brainacad.lab2_17_6;
 public class Storage {
 
     private int store;
-    private boolean readyToPrint = false;
+    private boolean readyToSet = true;
+    private boolean JobDone = false;
 
     public void setStore(int store) {
         this.store = store;
@@ -16,11 +17,19 @@ public class Storage {
         return store;
     }
 
-    public boolean isReadyToPrint(){
-        return readyToPrint;
+    public boolean isReadyToSet() {
+        return readyToSet;
     }
 
-    public void setReadyToPrint(boolean readyToPrint){
-        this.readyToPrint = readyToPrint;
+    public void setReadyToSet(boolean readyToSet) {
+        this.readyToSet = readyToSet;
+    }
+
+    public boolean isJobDone() {
+        return JobDone;
+    }
+
+    public void setJobDone(boolean jobDone) {
+        this.JobDone = jobDone;
     }
 }
