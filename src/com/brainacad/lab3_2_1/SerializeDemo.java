@@ -20,24 +20,17 @@ public class SerializeDemo {
         employee.setNumber(675892354);
 
         FileOutputStream fos = null;
-        ObjectOutputStream oos = null;
+
         try {
             fos = new FileOutputStream("src\\com\\brainacad\\lab3_2_1\\employee.ser");
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
 
-        try {
-            oos = new ObjectOutputStream(fos);
+        try (ObjectOutputStream oos = new ObjectOutputStream(fos)) {
             oos.writeObject(employee);
         } catch (IOException e) {
             e.printStackTrace();
-        } finally {
-            try {
-                oos.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
         }
 
     }
