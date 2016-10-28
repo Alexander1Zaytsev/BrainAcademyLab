@@ -1,4 +1,4 @@
-package com.brainacad.lab3_2_1.lab3_2_2;
+package com.brainacad.lab3_2_3;
 
 import com.brainacad.lab3_2_1.Employee;
 

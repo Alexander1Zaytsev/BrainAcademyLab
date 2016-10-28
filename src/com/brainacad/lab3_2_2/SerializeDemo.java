@@ -1,5 +1,7 @@
-package com.brainacad.lab3_2_1;
+package com.brainacad.lab3_2_2;
 
+
+import com.brainacad.lab3_2_1.Employee;
 
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
